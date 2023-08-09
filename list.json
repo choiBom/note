@@ -1,5 +1,10 @@
 [
     {
+        "type": "guide", 
+        "src": "/common/html/guide.html",
+        "title": "guide"
+    },
+    {
         "type": "acc", 
         "src": "/content/accordion/accordion_type-details-summary.html",
         "title": "accordion_type-details-summary"
