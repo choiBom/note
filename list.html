@@ -6,15 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>list</title>
-    <link rel="stylesheet" href="../../common/css/reset.css" />
-    <link rel="stylesheet" href="../../common/css/common.css" />
+    <link rel="stylesheet" href="./common/css/reset.css" />
+    <link rel="stylesheet" href="./common/css/common.css" />
     <link rel="stylesheet" href="list.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <div class="warp">
         <div class="list">
-            <ul class="">
+            <ul class="list_dashed">
+                <li>공통사항에 대한 작업은 note-common 브랜치에서 작업.</li>
+                <li>타입별로 브랜치 생성.</li>
+                <li>각 브랜치별 작업은 main 브랜치로 PR</li>
+            </ul>
+            <ul class="list_cont">
                 <!-- <li>
                     <div class="list_item-type">acc</div>
                     <div class="list_item-name">
@@ -40,7 +45,7 @@
                 list_data+="</div>"
                 list_data+="</li>";
             });
-            $(".list ul").append(list_data);
+            $(".list ul.list_cont").append(list_data);
         });
 });
 </script>
