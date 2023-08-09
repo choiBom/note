@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup type 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="../../common/css/common.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main id="contents">
+        <div class="wrap">
+            <div class="example">
+                <div class="example_head">
+                    <h3 class="example_title">popup</h3>
+                </div> 
+                <div class="example_container">
+                    <div class="example_box">
+                        <!-- example contents start -->
+                        <a class="cmp-button c-button c-button--default highlight m-medium w-medium js-pop-open" href="popSimpleAlert" data-link-name="" data-link-destination="" data-link-menu="" data-link-page-type="" data-cmp-data-layer="">
+                            <span class="cmp-button__text c-button__text">popSimpleAlert</span>
+                        </a>
+                        <!-- example contents end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="c-pop-msg small active" id="popSimpleAlert" role="dialog" aria-modal="true" tabindex="0">
+        <div class="c-pop-msg__container">
+            <div class="c-pop-msg__contents">
+                <p class="align-text-center" id="popSimpleAlert">You have 4 products ready to compare</p>
+            </div>
+            <div class="button c-pop-msg__button-wrap">
+                <button class="cmp-button c-button c-button--default default m-small w-medium c-pop-msg__close-btn js-pop-close" type="button" data-cmp-data-layer="" aria-controls="popSimpleAlert"><span class="cmp-button__text c-button__text">Close</span></button>
+            </div>
+            <div class="button c-pop-msg__close c-pop-msg__close--on-top">
+                <button class="cmp-button c-pop-msg__close-button js-pop-close" type="button" aria-controls="popSimpleAlert" data-cmp-data-layer=""><span class="cmp-button__text sr-only">close</span></button>
+            </div>
+        </div>
+        <div class="c-pop-msg__dimmed"></div>
+    </div>
+</body>

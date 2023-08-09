@@ -1,0 +1,149 @@
+/* _align.scss */
+.align-text-center {
+    text-align: center;
+}
+
+/* _button.scss */
+.c-button {
+    cursor: pointer;
+    display: inline-block;
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-weight: 700;
+    color: #000;
+    outline-offset: 0;
+}
+
+.c-button[class*=-default] {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 62.4375rem;
+    line-height: 1;
+    white-space: initial;
+    background: #fff;
+    font-weight: 600;
+    border: 0.0625rem solid #646464;
+    color: #000;
+    transition: background 0.3s, color 0.2s, border-color 0.3s;
+}
+
+
+/* _pop-msg.scss */
+.c-pop-msg {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.c-pop-msg__dimmed {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.c-pop-msg__container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    max-height: 100%;
+    background-color: #f0ece4;
+    margin: auto;
+    border-radius: 1.25rem;
+    border: 0.0625rem solid #cbc8c2;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.25);
+}
+
+.c-pop-msg__contents {
+    margin: 0 -0.625rem;
+    padding: 0 0.625rem;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.c-pop-msg__contents > p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+
+.c-pop-msg__close-button {
+    border: 0;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-pop-msg__close--on-top {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+}
+
+.c-pop-msg__close--on-top .c-pop-msg__close-button {
+    width: 2.75rem;
+    height: 2.75rem;
+}
+
+.c-pop-msg__close--on-top .c-pop-msg__close-button:before {
+    content: "";
+    display: block;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-image: url(../../common/images/icon-close-black-12-12.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.c-pop-msg__button-wrap {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+
+/* popup size : small, small-x */
+.small-x .c-pop-msg__container, 
+.small .c-pop-msg__container {
+    max-width: 23.75rem;
+    width: 100%;
+    padding: 2.1875rem;
+    background-color: #fff;
+}
+
+.small-x .c-pop-msg__container .c-pop-msg__button-wrap, 
+.small .c-pop-msg__container .c-pop-msg__button-wrap {
+    justify-content: center;
+}
+
+@media (max-width: 48rem) {
+    .c-button[class*=-default].m-small {
+        min-width: 5rem;
+        height: 2.25rem;
+        padding: 0 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 769px) {
+
+}
