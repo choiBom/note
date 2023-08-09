@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tag : details - summary</title>
-    <link rel="stylesheet" href="../../common/css/reset.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="../../common/css/common.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -47,24 +47,31 @@
         <div class="example">
             <div class="example_head">
                 <h3 class="example_title">tag : details - summary</h3>
-                <p class="example_desc">LG GP1 - CT000F Checkout > step2. Delivery > Shipping Billing popup</p>
+                <p class="example_desc">LG GP1 - CT000F Checkout > step2. Delivery > new Shipping/Billing Address popup > BR</p>
             </div> 
             <div class="example_container">
                 <div class="example_box">
-                    <details class="searchAddressSelect searchAddress--clearArrow" open="">
-                        <summary class="searchAddress__title">Por favor, selecione uma cidade.</summary>
-                        <div class="searchAddress__inr">
-                        <div class="c-input-item">
-                            <input type="searchAddressSelect" id="streetAddress-list" value="" placeholder="" data-placeholder="">
+                    <!-- example contents start -->
+                    <div class="c-input-item"> 
+                        <label class="font-w-normal-20 font-m-normal-16" for="streetAddress-br">Cidade</label>
+                        <details class="searchAddressSelect searchAddress--clearArrow" open="">
+                            <summary class="searchAddress__title">Por favor, selecione uma cidade.</summary>
+                            <div class="searchAddress__inr">
+                            <div class="c-input-item">
+                                <input class="my-warn" type="searchAddressSelect" id="streetAddress-br" value="" placeholder="" data-placeholder="">
+                            </div>
+                            <div class="searchAddress__list"> 
+                                <button class="searchAddress__item" type="button">Adamantina</button>
+                                <button class="searchAddress__item" type="button">Adolfo</button>
+                                <button class="searchAddress__item" type="button">Aguai</button>
+                                <button class="searchAddress__item" type="button">Agudos</button>
+                                <button class="searchAddress__item" type="button">Alfredo Marcondes</button>
+                            </div>
+                            </div>
+                        </details>
+                        <div class="c-warning font-m-normal-14 font-w-normal-14">Cidade é um campo obrigatório.</div>
                         </div>
-                        <div class="searchAddress__list"> 
-                            <button class="searchAddress__item" type="button">Adamantina</button>
-                            <button class="searchAddress__item" type="button">Adolfo</button>
-                            <button class="searchAddress__item" type="button">Aguai</button>
-                            <button class="searchAddress__item" type="button">Agudos</button>
-                            <button class="searchAddress__item" type="button">Alfredo Marcondes</button>
-                        </div>
-                    </details>
+                    <!-- example contents end -->
                 </div>
             </div>
         </div>
