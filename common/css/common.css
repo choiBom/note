@@ -22,29 +22,17 @@ html, body {
     margin:10px;
 }
 
-.example .example_head {
+.example .example_title {
     padding:10px;
     border-bottom: 1px solid;
-}
-
-.example .example_title {
-    font-size: 16px;
-}
-.example .example_desc {
-    color:#666;
-    font-size: 14px;
-}
-
-.example .example_title + .example_desc {
-    margin-top: 10px;
 }
 .example .example_container {
     padding:10px 10px 30px;
 }
-.example .example_container .example_head {
+.example .example_container .example_title {
     padding:0 0 10px;
 }
 
-.example .example_head + .example_box {
+.example .example_title + .example_box {
     padding-top: 30px;
 }
