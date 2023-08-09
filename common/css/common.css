@@ -15,6 +15,10 @@ html, body {
     margin: 0 auto;
 } 
 
+.wrap * {
+    box-sizing: border-box;
+}
+
 .wrap .example {
     border:1px solid;
     border-radius: 10px;
