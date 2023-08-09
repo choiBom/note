@@ -31,7 +31,6 @@
     transition: background 0.3s, color 0.2s, border-color 0.3s;
 }
 
-
 /* _pop-msg.scss */
 .c-pop-msg {
     position: fixed;
@@ -136,6 +135,7 @@
 }
 
 @media (max-width: 48rem) {
+    /* _button.scss */
     .c-button[class*=-default].m-small {
         min-width: 5rem;
         height: 2.25rem;
@@ -145,5 +145,25 @@
 }
 
 @media (min-width: 769px) {
+    /* _button.scss */
+    .c-button[class*=-default].m-small {
+        min-width: 6.25rem;
+        height: 2.75rem;
+        padding: 0 1.25rem;
+        font-size: 1rem;
+    }
 
+    /* _pop-msg.scss */
+    .c-pop-msg__container {
+        border-radius: 1.75rem;
+    }
+
+    .small-x .c-pop-msg__container, 
+    .small .c-pop-msg__container{
+        padding: 3.125rem 2.5rem 2.5rem;
+    }
+    
+    :not([class*=full]) .c-pop-msg__container {
+        max-height: calc(100vh - 2rem);
+    }
 }
