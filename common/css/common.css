@@ -1,3 +1,4 @@
+/* reset */
 html, body {
     padding: 0;
     margin: 0;
@@ -7,9 +8,22 @@ html, body {
     font-family:'Noto Sans KR', sans-serif;
 } 
 
-h1, h2, h3, h4 {
-    padding:0 0;
+h1, h2, h3, h4, h5, h6, 
+div, span, p, a, address, em, img, strong, sub, sup, b, i, 
+dl, dt, dd, 
+ol, ul, li, 
+table, caption, tbody, thead, tfoot, tr, th, td,
+article, details, summary, 
+section, footer, header, nav, aside, canvas, mark, audio, video  {
     margin:0;
+    padding:0 0;
+    border:0;
+    font:inherit;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 :focus {
@@ -42,9 +56,10 @@ a:focus {
 }
 
 li {
-    list-style-position: inside;
+    list-style: none;
 }
 
+/* 공통사용 */
 
 .wrap {
     display: flex;
