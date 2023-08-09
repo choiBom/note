@@ -7,6 +7,45 @@ html, body {
     font-family:'Noto Sans KR', sans-serif;
 } 
 
+h1, h2, h3, h4 {
+    padding:0 0;
+    margin:0;
+}
+
+:focus {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid currentcolor;
+    outline-offset: 1px;
+}
+
+button {
+    color: inherit;
+}
+
+input[type='text']:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline-offset: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+    text-decoration: underline;
+}
+
+li {
+    list-style-position: inside;
+}
+
+
 .wrap {
     display: flex;
     flex-direction: column;
@@ -19,10 +58,6 @@ html, body {
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4 {
-    padding:0 0;
-    margin:0;
-}
 
 .wrap .example {
     border:1px solid;
