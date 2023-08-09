@@ -144,7 +144,7 @@
     max-height: 2.75rem;
 }
 
-.CT0019 .my-input .c-warning {
+.example .my-input .c-warning {
     color: #ea1917;
     margin-top: 0.375rem;
     padding-left: 0.8125rem;
@@ -180,6 +180,10 @@
     text-align: left;
     background: #fff;
     cursor: pointer;
+}
+
+.example .searchAddress__item:hover {
+    text-decoration: underline;
 }
 
 .example .searchAddress__item:first-child {
@@ -254,7 +258,7 @@
         font-size: 0.875rem;
     }
 
-    .CT0019 .my-input .c-warning {
+    .example .my-input .c-warning {
         font-size: 0.875rem;
         line-height: 1rem;
         margin-top: 0.5rem;
