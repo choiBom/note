@@ -1,0 +1,8 @@
+.example .example_box .searchAddressSelect {
+    border-radius: 0.75rem;
+    background-image: none;
+}
+
+.example .example_box .searchAddressSelect[open] {
+    border: 0.0625rem solid #cbc8c2;
+}
