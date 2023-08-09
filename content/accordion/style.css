@@ -86,7 +86,7 @@
     height: 0.5rem;
     background-color: #fff;
     background-repeat: no-repeat;
-    background-image: url(../../assets/icon/icon-arrow-gray3-down-12-8.svg);
+    background: url(../../common/images/icon-arrow-gray3-down-12-8.svg);
     background-position: 0 0;
     background-size: contain;
 }
