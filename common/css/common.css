@@ -19,6 +19,11 @@ html, body {
     box-sizing: border-box;
 }
 
+h1, h2, h3, h4 {
+    padding:0 0;
+    margin:0;
+}
+
 .wrap .example {
     border:1px solid;
     border-radius: 10px;
