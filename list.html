@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list</title>
+    <link rel="stylesheet" href="../../common/css/reset.css" />
+    <link rel="stylesheet" href="../../common/css/common.css" />
+    <link rel="stylesheet" href="list.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="warp">
+        <div class="list">
+            <ul class="">
+                <!-- <li>
+                    <div class="list_item-type">acc</div>
+                    <div class="list_item-name">
+                        <a href="/content/accordion/accordion_type-details-summary.html" target="_blank" class="list_item-link">acc_type1</a>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $.getJSON("list.json",function(data){
+            let list_data="";
+            let list_num = 0;
+            $.each(data,function(index,value){
+                list_num++;
+                list_data+="<li>";
+                list_data+="<div class='list_item-num'>"+list_num+"</div>"
+                list_data+="<div class='list_item-type'>"+value.type+"</div>"
+                list_data+="<div class='list_item-name'>"
+                list_data+="<a href='"+value.src+"' target='_blank' class='list_item-link'>"+value.title+"</a>"    
+                list_data+="</div>"
+                list_data+="</li>";
+            });
+            $(".list ul").append(list_data);
+        });
+});
+</script>

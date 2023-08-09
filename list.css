@@ -1,0 +1,42 @@
+.warp .list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+.warp .list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 2px solid #ddd;
+}
+
+.warp .list ul li {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+}
+
+.warp .list ul .list_item-num {
+    color:#666;
+    font-size: 14px;
+    line-height: 20px;
+}
+.warp .list ul .list_item-type {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.warp .list ul .list_item-name {
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 10px;
+    flex: 1;
+}
+
+.warp .list ul .list_item-link {
+    display: inline-block;
+    margin-right: 10px;
+}

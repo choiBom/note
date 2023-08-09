@@ -1,0 +1,38 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+    font-family:'Noto Sans KR', sans-serif;
+} 
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+} 
+
+.wrap .example {
+    border:1px solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin:10px;
+}
+
+.example .example_title {
+    padding:10px;
+    border-bottom: 1px solid;
+}
+.example .example_container {
+    padding:10px 10px 30px;
+}
+.example .example_container .example_title {
+    padding:0 0 10px;
+}
+
+.example .example_title + .example_box {
+    padding-top: 30px;
+}
