@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup type 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="../../common/css/common.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main id="contents">
+        <div class="wrap">
+            <div class="example">
+                <div class="example_head">
+                    <h3 class="example_title">popup</h3>
+                </div> 
+                <div class="example_container">
+                    <div class="example_box">
+                        <!-- example contents start -->
+                        <div class="content_item_box">
+                            <div class="button c-cta">
+                                <a class="cmp-button c-button c-button--box medium red js-pop-open " href="#popSimpleAlert" data-cmp-data-layer="" role="button">
+                                    <span class="cmp-button__text c-button__text">Simple Alert</span>
+                                </a>
+                            </div>
+                            <div class="button c-cta">
+                                <a class="cmp-button c-button c-button--box medium red js-pop-open " href="#popWishlistSignIn" data-cmp-data-layer="" role="button">
+                                    <span class="cmp-button__text c-button__text">Sign In to Create Your Wishlist</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- example contents end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- example contents start : popSimpleAlert -->
+    <div class="c-pop-msg small" id="popSimpleAlert" role="dialog" aria-modal="true" tabindex="0">
+        <div class="c-pop-msg__container">
+            <div class="c-pop-msg__contents">
+                <p class="align-text-center" id="popSimpleAlert">You have 4 products ready to compare</p>
+            </div>
+            <div class="button c-pop-msg__button-wrap">
+                <button class="cmp-button c-button c-button--default default m-small w-medium c-pop-msg__close-btn js-pop-close" type="button" data-cmp-data-layer="" aria-controls="popSimpleAlert"><span class="cmp-button__text c-button__text">Close</span></button>
+            </div>
+            <div class="button c-pop-msg__close c-pop-msg__close--on-top">
+                <button class="cmp-button c-pop-msg__close-button js-pop-close" type="button" aria-controls="popSimpleAlert" data-cmp-data-layer=""><span class="cmp-button__text sr-only">close</span></button>
+            </div>
+        </div>
+        <div class="c-pop-msg__dimmed"></div>
+    </div>
+    <!-- example contents end : popSimpleAlert -->
+    <!-- example contents start : popWishlistSignIn -->
+    <div class="c-pop-msg medium" id="popWishlistSignIn" role="dialog" aria-modal="true" aria-labelledby="popWishlistSignIn-headline" tabindex="0">
+        <div class="c-pop-msg__container">
+            <div class="c-pop-msg__header">
+                <!-- block - text contents-->
+                <div class="c-text-contents">
+                    <div class="title c-text-contents__headline" id="popWishlistSignIn-headline">
+                    <!-- 22.11.11 - moved font classname here--><strong class="cmp-title font-w-light-36 font-m-light-24" data-cmp-data-layer="">Sign In to Create Your Wishlist</strong>
+                    </div>
+                </div>
+            </div>
+            <!-- block - text contents-->
+            <div class="c-text-contents"> 
+                <div class="text c-text-contents__bodycopy">
+                    <div class="cmp-text font-m-normal-16 font-w-normal-16" data-cmp-data-layer="">
+                    Add items to your wishlist so you can easily find them when you return to LG.com.
+                    <br>
+                    Its an easy way to keep track of that special something Youve had your eye on or save gift ideas for friends and family.
+                    </div>
+                </div>
+            </div>
+            <div class="button c-pop-msg__button-wrap c-pop-msg__button-wrap--no-divide-on-mobile">
+                <button class="cmp-button c-button c-button--default default m-small w-medium c-pop-msg__close-btn js-pop-close" type="button" data-cmp-data-layer="" aria-controls="popWishlistSignIn"><span class="cmp-button__text c-button__text">No Thanks, Not Now</span>
+                </button>
+            <!-- GA4 - Please add the data-link- attribute according to the tagging guide.--><a class="cmp-button c-button c-button--default highlight m-small w-medium" href="#" data-link-name="" data-link-destination="" data-link-menu="" data-link-page-type="" data-cmp-data-layer=""><span class="cmp-button__text c-button__text">Continue to Sign In</span></a>
+            </div>
+            <div class="button c-pop-msg__close c-pop-msg__close--on-top">
+                <button class="cmp-button c-pop-msg__close-button js-pop-close" type="button" aria-controls="popWishlistSignIn" data-cmp-data-layer=""><span class="cmp-button__text sr-only">close</span></button>
+            </div>
+        </div>
+        <div class="c-pop-msg__dimmed"></div>
+    </div>
+    <!-- example contents end : popWishlistSignIn -->
+</body>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="pop.js"></script>
+<script>
+$(document).ready(function () {
+    console.log('test')
+    initPopMsg(document.querySelectorAll('.js-pop-open'));
+});
+</script>
+</html>

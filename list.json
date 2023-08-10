@@ -8,5 +8,10 @@
         "type": "acc", 
         "src": "/content/accordion/accordion_type-details-summary.html",
         "title": "accordion_type-details-summary"
+    },
+    {
+        "type": "popup", 
+        "src": "/content/popup/popup.html",
+        "title": "popup"
     }
 ]

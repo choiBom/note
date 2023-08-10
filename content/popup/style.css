@@ -3,6 +3,20 @@
     text-align: center;
 }
 
+/* _text-contents.scss */
+.c-text-contents__bodycopy {
+    color: #333;
+}
+
+/* c-cta */
+.c-cta {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.625rem 0.5rem;
+}
+
 /* _button.scss */
 .c-button {
     cursor: pointer;
@@ -31,6 +45,45 @@
     transition: background 0.3s, color 0.2s, border-color 0.3s;
 }
 
+.c-button[class*=-default]:hover {
+    background: #ea1917;
+    border-color: #ea1917;
+    color: #fff;
+}
+
+.c-button[class*=-default].highlight {
+    background: #ea1917;
+    border-color: #ea1917;
+    color: #fff;
+}
+
+.c-button[class*=-box] {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 62.4375rem;
+    font-size: 1rem;
+    line-height: 1;
+    white-space: initial;
+}
+
+.c-button[class*=-box].medium {
+    min-width: 6.25rem;
+    height: 2.5rem;
+    padding: 0 1.5rem;
+    font-size: 0.875rem;
+}
+
+.c-button[class*=-box].red {
+    color: #fff;
+    background-color: #ea1917;
+}
+
+.c-button[class*=-box] .c-button__text {
+    text-align: center;
+}
+
 /* _pop-msg.scss */
 .c-pop-msg {
     position: fixed;
@@ -43,6 +96,9 @@
     padding-left: 1rem;
     padding-right: 1rem;
 }
+.c-pop-msg:not(.active) {
+    display: none;
+}
 
 .c-pop-msg__dimmed {
     content: "";
@@ -52,6 +108,12 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.c-pop-msg__header {
+    border-bottom: 0.0625rem solid #cbc8c2;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .c-pop-msg__container {
@@ -119,8 +181,7 @@
     margin-top: 1.5rem;
 }
 
-
-/* popup size : small, small-x */
+/* popup size : small, small-x, medium */
 .small-x .c-pop-msg__container, 
 .small .c-pop-msg__container {
     max-width: 23.75rem;
@@ -134,7 +195,33 @@
     justify-content: center;
 }
 
+.medium .c-pop-msg__container {
+    width: 100%;
+    padding: 2.5rem 1.875rem;
+}
+
+/* ---------------------------------------------------------- example_box inner content ----------------------------------------------------------*/
+.content_item_box {
+    display: flex;
+    gap: 5px;
+    flex-flow: wrap;
+}
+
+
 @media (max-width: 48rem) {
+    /* _font.scss */
+    .font-m-light-24 {
+        font-size: 1.5rem;
+    line-height: 1.75rem;
+    font-weight: 300;
+    }
+
+    .font-m-normal-16 {
+        font-size: 1rem;
+        line-height: 1.125rem;
+        font-weight: 400;
+    }
+
     /* _button.scss */
     .c-button[class*=-default].m-small {
         min-width: 5rem;
@@ -142,9 +229,26 @@
         padding: 0 1rem;
         font-size: 0.875rem;
     }
+
+    /* _pop-masg.scss */
+    .c-pop-msg__button-wrap--no-divide-on-mobile {
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 769px) {
+    /* _font.scss */
+    .font-w-light-36 {
+        font-size: 2.25rem;
+        line-height: 2.625rem;
+        font-weight: 300;
+    }
+
+    /* _text-contents.scss */
+    .c-text-contents__headline strong {
+        font-weight: inherit;
+    }
+    
     /* _button.scss */
     .c-button[class*=-default].m-small {
         min-width: 6.25rem;
@@ -154,16 +258,30 @@
     }
 
     /* _pop-msg.scss */
+    .c-pop-msg__header {
+        padding-bottom: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+
     .c-pop-msg__container {
         border-radius: 1.75rem;
     }
-
+    
+    /* popup size : small, small-x, medium */
     .small-x .c-pop-msg__container, 
     .small .c-pop-msg__container{
         padding: 3.125rem 2.5rem 2.5rem;
     }
-    
+
+    .medium .c-pop-msg__container {
+        padding: 3.125rem;
+        max-width: 41.25rem;
+    }
+
     :not([class*=full]) .c-pop-msg__container {
         max-height: calc(100vh - 2rem);
     }
+
+    /* ---------------------------------------------------------- example_box inner content ----------------------------------------------------------*/
+
 }
