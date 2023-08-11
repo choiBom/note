@@ -15,6 +15,11 @@
         "title": "input radio"
     },
     {
+        "type": "acc", 
+        "src": "/content/accordion/accordion_type01.html",
+        "title": "accordion 01"
+    },
+    {
         "type": "popup", 
         "src": "/content/popup/popup.html",
         "title": "popup"

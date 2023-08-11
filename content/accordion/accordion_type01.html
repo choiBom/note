@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="../../common/css/common.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="wrap accordion-wrap03">
+        <div class="example">
+            <div class="example_head">
+                <h3 class="example_title">accordion</h3>
+            </div> 
+            <div class="example_container">
+                <div class="example_box">
+                    <!-- example contents start -->
+                    <div class="buy-delivery-box">
+                        <ul class="buy-delivery-box__list">
+                            <li class="buy-delivery-box__item">
+                                <div class="c-accordion js-accordion buy-delivery-box__accordion js-accordion-initialized">
+                                    <div class="c-accordion__box js-accordion-handle-target c-accordion__box--expand">
+                                        <div class="c-accordion__head">
+                                            <!-- block - text contents-->
+                                            <div class="c-accordion__head__container">
+                                                <div class="c-accordion__head-text c-text-contents">
+                                                    <span class="c-accordion__initial buy-delivery-box__head font-w-normal-16 font-m-normal-14" aria-hidden="true">Delivery &amp; Installation &amp; Wallmount
+                                                        <button class="cmp-button c-icon-button c-icon-button--more-info c-tooltip__button" type="button" aria-expanded="false" data-cmp-data-layer="">
+                                                            <span class="sr-only">More information</span>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="button">
+                                                <button class="cmp-button c-accordion__button js-accordion-trigger" aria-expanded="true" aria-controls="buy-delivery-box__target-default-delivery66">
+                                                    <span class="c-accordion__button-text expand sr-only">Expand</span>
+                                                    <span class="c-accordion__button-text collapse sr-only">Collapse</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="c-accordion__body" id="buy-delivery-box__target-default-delivery66">
+                                            <div class="c-text-contents c-accordion__body-text">
+                                                <div class="c-checkout-step02-delivery__date-edit buy-delivery-box__select">
+                                                    <a class="cmp-button c-button c-button--box-icon medium red js-pop-open " href="#CalendarPopup" data-cmp-data-layer="" role="button">
+                                                        <span class="cmp-button__text c-button__text">Select Date</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- example contents end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="accordion.js"></script>
+<script>
+$(document).ready(function () {
+    console.log('test')
+});
+</script>
+</html>

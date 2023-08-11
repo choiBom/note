@@ -74,6 +74,90 @@
     line-height: 0.875rem;
 }
 
+/* _button.scss */
+.c-icon-button {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+    white-space: nowrap;
+    color: #000;
+    outline-offset: 0;
+    column-gap: 0.25rem;
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    font-weight: 600;
+}
+
+.c-icon-button:before {
+    content: "";
+    display: inline-block;
+    background-position: 100% center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.c-icon-button[class*=-more-info] {
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+}
+
+.c-icon-button[class*=-more-info] {
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+}
+
+.c-icon-button[class*=-more-info]:before {
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/icon/icon-exclamation-mid-gray2-16-16.svg);
+}
+
+a.c-icon-button, 
+button.c-icon-button {
+    cursor: pointer;
+}
+
+
+/* _accordion.scss */
+.c-accordion__button {
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.c-accordion__button:after {
+    content: "";
+    display: block;
+    width: 0.75rem;
+    height: 0.4375rem;
+    background-image: url(../../common/images/icon-arrow-gray3-down-12-7.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.c-accordion__button[aria-expanded=true]:after {
+    transform: rotateX(180deg);
+}
+
+.c-accordion__button[aria-expanded=true] .expand {
+    display: none;
+}
+
+.c-accordion__box--expand .c-accordion__body {
+    display: block;
+}
+
+
+
 /* accordion-wrap01 */
 /* CT000F */
 .accordion-wrap01 .example .searchAddressSelect {
@@ -348,6 +432,100 @@
     color: #333;
 }
 
+/* accordion-wrap03 */
+.accordion-wrap03 .buy-delivery-box__item .c-accordion__box {
+    margin-bottom: 0;
+}
+
+.accordion-wrap03 .buy-delivery-box__item .c-accordion__head {
+    position: relative;
+    padding: 0.75rem 0.8125rem;
+    border: 0.0625rem solid #cbc8c2;
+    border-radius: 0.75rem;
+}
+
+.accordion-wrap03 .buy-delivery-box__item .c-accordion__box--expand .c-accordion__head {
+    border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.accordion-wrap03 .buy-delivery-box__item .c-accordion__head__container {
+    padding-right: 1.375rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-wrap03 .buy-delivery-box__item .c-accordion__head-text {
+    display: inline-block;
+    position: relative;
+    width: 72%;
+    line-height: 1.25rem;
+}
+
+.CT000C .CT0302 .buy-delivery-box__item .c-accordion__head-text span.c-accordion__initial {
+    position: relative;
+    padding-right: 1.25rem;
+}
+
+.accordion-wrap03 .buy-delivery-box__item .c-accordion__head-text + .buy-delivery-box__head {
+    text-align: right;
+}
+
+.accordion-wrap03 .buy-delivery-box__item .c-accordion__button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 0;
+    padding-right: 1rem;
+}
+
+.accordion-wrap03 .buy-delivery-box__item .c-accordion__button:after {
+    background-image: url(../../common/images/icon-arrow-gray3-down-10-6.svg);
+    background-position: bottom;
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+.accordion-wrap03 .buy-delivery-box__item .c-accordion__button[aria-expanded=true]:after {
+    transform: rotateX(180deg);
+}
+
+.accordion-wrap03 .buy-delivery-box__select {
+    padding: 0.75rem 0.8125rem;
+    border-width: 0 0.0625rem 0.0625rem 0.0625rem;
+    border-style: solid;
+    border-color: #cbc8c2;
+    border-radius: 0 0 0.75rem 0.75rem;
+}
+
+.accordion-wrap03 .buy-delivery-box__select .c-button[class*=-box].medium {
+    background-color: #fff;
+    border: 0.0625rem solid #cbc8c2;
+    border-radius: 0.75rem;
+    width: 100%;
+    height: auto;
+    display: block;
+    text-align: left;
+    padding: 0.75rem 0.8125rem;
+    position: relative;
+    color: #000;
+}
+
+.accordion-wrap03 .buy-delivery-box__select .c-button[class*=-box].medium span {
+    font-size: 1rem;
+    line-height: 1.125rem;
+    color: #666;
+    font-weight: 400;
+    text-transform: none;
+    color: #646464;
+}
+
+
 @media (max-width: 48rem) {
     /* _font.scss */
     .font-m-normal-14 {
@@ -376,9 +554,26 @@
         font-weight: 400;
     }
 
+    .font-w-semibold-16 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        font-weight: 600;
+    }
+
     .font-w-normal-14 {
         font-size: 0.875rem;
         line-height: 1.25rem;
+    }
+
+    /* _button.scss */
+    .c-icon-button {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    .c-icon-button:before {
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     /* _form.scss */
@@ -397,6 +592,13 @@
         margin-top: 0.5rem;
         font-size: 0.875rem;
         line-height: 1rem;
+    }
+
+    /*_accordion.scss */
+    .c-accordion__button:after {
+        width: 1.125rem;
+        height: 0.625rem;
+        background-image: url(../../common/images/icon-arrow-gray3-down-18-10.svg);
     }
 
     /* accordion-wrap01 */
@@ -455,5 +657,20 @@
     .accordion-wrap02 .c-checkout-step02-form .my-input ul .c-input-item label {
         font-size: 1rem;
         line-height: 1.125rem;
+    }
+
+    /* .accordion-wrap03 */
+    .accordion-wrap03 .buy-delivery-box__item .c-accordion__head-text {
+        width: auto;
+    }
+
+    .accordion-wrap03 .buy-delivery-box__item .c-accordion__button:after {
+        width: 0.75rem;
+        height: 0.75rem;
+    }
+
+    .accordion-wrap03 .buy-delivery-box__select .c-button[class*=-box].medium span {
+        font-size: 1rem;
+        line-height: 1.25rem;
     }
 }
