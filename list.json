@@ -7,7 +7,12 @@
     {
         "type": "acc", 
         "src": "/content/accordion/accordion_type-details-summary.html",
-        "title": "accordion_type-details-summary"
+        "title": "details-summary"
+    },
+    {
+        "type": "acc", 
+        "src": "/content/accordion/accordion_type-radio-button.html",
+        "title": "input radio"
     },
     {
         "type": "popup", 

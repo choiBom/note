@@ -1,12 +1,56 @@
 /* _form.scss */
-.example .c-input-item label {
+.c-radio-item .label::before, 
+.c-checkbox-item .label::before {
+    content: "";
+    display: inline-block;
+    min-width: 1.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+    border: 0.0625rem solid #000;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0.25rem;
+}
+
+.c-radio-item label, 
+.c-checkbox-item label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    line-height: 1.25rem;
+}
+
+.c-input-item label {
+    display: block;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+.c-radio-item input[type=radio] {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    opacity: 0;
+}
+
+.font-m-normal-20 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+
+.c-input-item label {
     display: block;
     color: #333;
     margin-bottom: 0.5rem;
 }
 
-.example .c-input-item input, 
-.example .c-input-item textarea {
+.c-input-item input, 
+.c-input-item textarea {
     width: 100%;
     height: 2.75rem;
     padding-left: 0.8125rem;
@@ -16,12 +60,12 @@
     border-radius: 0.75rem;
 }
 
-.example .c-input-item input.my-warn, 
-.example .c-input-item textarea.my-warn {
+.c-input-item input.my-warn, 
+.c-input-item textarea.my-warn {
     border-color: #ea1917;
 }
 
-.example .c-warning {
+.c-warning {
     color: #ea1917;
     position: relative;
     padding-left: 0.8125rem;
@@ -30,22 +74,23 @@
     line-height: 0.875rem;
 }
 
+/* accordion-wrap01 */
 /* CT000F */
-.example .searchAddressSelect {
+.accordion-wrap01 .example .searchAddressSelect {
     border-radius: 0.75rem;
     background-image: none;
 }
 
-.example .searchAddressSelect[open] {
+.accordion-wrap01 .example .searchAddressSelect[open] {
     border: 0.0625rem solid #cbc8c2;
 }
 
-.example .my-input ul .c-input-item label {
+.accordion-wrap01 .example .my-input ul .c-input-item label {
     color: #333;
 }
 
-.example .buy-new-address .c-checkout-step01-formbox .my-input .c-input-item label, 
-.example .buy-new-address .c-checkout-step01-formbox .my-input .c-select-item label {
+.accordion-wrap01 .example .buy-new-address .c-checkout-step01-formbox .my-input .c-input-item label, 
+.accordion-wrap01 .example .buy-new-address .c-checkout-step01-formbox .my-input .c-select-item label {
     display: inline-block;
     vertical-align: middle;
     font-size: 0.875rem;
@@ -53,7 +98,7 @@
     margin-bottom: 0.375rem;
 }
 
-.example .searchAddress__title {
+.accordion-wrap01 .example .searchAddress__title {
     position: relative;
     height: auto;
     font-size: 1rem;
@@ -66,17 +111,17 @@
 }
 
 /* CT000F > summary (acc head) */
-.example .searchAddressSelect summary {
+.accordion-wrap01 .example .searchAddressSelect summary {
     list-style: none;
     background-image: none;
 }
 
-.example .searchAddressSelect summary::marker {
+.accordion-wrap01 .example .searchAddressSelect summary::marker {
     display: none;
     content: "";
 }
 
-.example .searchAddress__title:after {
+.accordion-wrap01 .example .searchAddress__title:after {
     content: "";
     display: block;
     position: absolute;
@@ -91,23 +136,23 @@
     background-size: contain;
 }
 
-.example .searchAddressSelect[open] .searchAddress__title {
+.accordion-wrap01 .example .searchAddressSelect[open] .searchAddress__title {
     border: none;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-.example .searchAddressSelect[open] .searchAddress__title:after {
+.accordion-wrap01 .example .searchAddressSelect[open] .searchAddress__title:after {
     transform: rotate(180deg);
 }
 
 /* CT000F > acc body */
-.example .searchAddress__inr {
+.accordion-wrap01 .example .searchAddress__inr {
     border: 0.0625rem solid #cbc8c2;
     border-radius: 0.75rem;
 }
 
-.example .searchAddressSelect .searchAddress__inr {
+.accordion-wrap01 .example .searchAddressSelect .searchAddress__inr {
     border-radius: 0;
     padding: 0.75rem 0.75rem 0;
     border: none;
@@ -115,25 +160,25 @@
 }
 
 /* CT000F > acc body > input */
-.example .my-input ul .c-input-item {
+.accordion-wrap01 .example .my-input ul .c-input-item {
     position: relative;
 }
 
-.example .my-input input {
+.accordion-wrap01 .example .my-input input {
     padding: 0.8125rem 1rem;
 }
 
-.example .my-input .my-warn {
+.accordion-wrap01 .example .my-input .my-warn {
     border-color: #ea1917;
 }
 
-.example .my-input input.my-warn {
+.accordion-wrap01 .example .my-input input.my-warn {
     padding-right: 2.5rem;
     border-color: #ea1917 !important;
 }
 
-.example .buy-new-address .c-checkout-step01-formbox .my-input .c-input-item input, 
-.example .buy-new-address .c-checkout-step01-formbox .my-input .c-select-item input {
+.accordion-wrap01 .example .buy-new-address .c-checkout-step01-formbox .my-input .c-input-item input, 
+.accordion-wrap01 .example .buy-new-address .c-checkout-step01-formbox .my-input .c-select-item input {
     height: auto;
     font-size: 1rem;
     line-height: 1.25rem;
@@ -144,7 +189,7 @@
     max-height: 2.75rem;
 }
 
-.example .my-input .c-warning {
+.accordion-wrap01 .example .my-input .c-warning {
     color: #ea1917;
     margin-top: 0.375rem;
     padding-left: 0.8125rem;
@@ -153,7 +198,7 @@
 }
 
 /* CT000F > acc body > list */
-.example .searchAddress__list {
+.accordion-wrap01 .example .searchAddress__list {
     padding: 0 0.75rem;
     overflow: auto;
     max-height: 9.75rem;
@@ -161,14 +206,14 @@
     padding-bottom: 0.75rem;
 }
 
-.example .searchAddressSelect .searchAddress__list {
+.accordion-wrap01 .example .searchAddressSelect .searchAddress__list {
     margin-top: 0.1875rem;
     border-top: none;
     padding-left: 0;
     padding-right: 0;
 }
 
-.example .searchAddress__item {
+.accordion-wrap01 .example .searchAddress__item {
     display: block;
     position: relative;
     width: 100%;
@@ -182,27 +227,136 @@
     cursor: pointer;
 }
 
-.example .searchAddress__item:hover {
+.accordion-wrap01 .example .searchAddress__item:hover {
     text-decoration: underline;
 }
 
-.example .searchAddress__item:first-child {
+.accordion-wrap01 .example .searchAddress__item:first-child {
     padding-top: 0.75rem;
 }
 
-.example .searchAddressSelect .searchAddress__item:first-child {
+.accordion-wrap01 .example .searchAddressSelect .searchAddress__item:first-child {
     padding-top: 0.5625rem;
+}
+
+/* accordion-wrap02 */
+.accordion-wrap02 .c-checkout-step02 {
+    margin-top: 1rem;
+    padding: 0.9375rem 1rem;
+    border: 0.0625rem solid #cbc8c2;
+    border-radius: 0.75rem;
+}
+
+.accordion-wrap02 .c-checkout-step02-form {
+    padding: 0;
+}
+
+.accordion-wrap02 .c-checkout-step02-form__title {
+    padding: 1.25rem 1rem 0.625rem;
+    padding-bottom: 0;
+}
+
+.accordion-wrap02 .c-checkout-step02__box {
+    padding: 1.25rem 1rem 1rem;
+}
+
+.accordion-wrap02 .c-checkout-step02__box .c-input-item--radio-select-box .c-radio-item {
+    position: relative;
+}
+
+.accordion-wrap02 .c-checkout-step02__box .c-input-item--radio-select-box .c-radio-item .label {
+    font-size: 0.875rem;
+    color: #333;
+}
+
+.accordion-wrap02 .c-checkout-step02__box .c-input-item--radio-select-box .c-radio-item input[type=radio] + .radio .label::before {
+    content: "";
+    display: inline-block;
+    min-width: 1.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+    border: 0.0625rem solid #000;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0.25rem;
+}
+
+.accordion-wrap02 .c-checkout-step02__box .c-input-item--radio-select-box .c-radio-item input[type=radio]:checked + .radio .label::before {
+    background-image: url(../../common/images/icon-check-white-15-12.svg);
+    background-color: #ea1917;
+    border-color: #ea1917;
+}
+
+.accordion-wrap02 .c-checkout-step02__box .c-input-item--radio-select-box .c-radio-item .c-input-item--radio-select-box__content {
+    display: none;
+}
+
+.accordion-wrap02 .c-checkout-step02__box .c-input-item--radio-select-box .c-radio-item input[type=radio]:checked + .radio + .c-input-item--radio-select-box__content {
+    display: block;
+}
+
+.accordion-wrap02 .c-checkout-step02-form .my-input {
+    padding: 0.75rem 1rem 1.25rem;
+    text-align: left;
+}
+
+.accordion-wrap02 .c-checkout-step02-form .my-input ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.accordion-wrap02 .c-checkout-step02 ul li {
+    list-style: none;    
+}
+
+.accordion-wrap02 .c-checkout-step02-form .my-input ul li {
+    margin: 0;
+    width: 100%;
+}
+
+.accordion-wrap02 .c-checkout-step02-form .my-input ul li + li {
+    margin-top: 1.5rem;
+}
+
+.accordion-wrap02 .c-checkout-step02-form .my-input ul .c-input-item label {
+    color: #333;
+    font-size: 0.875rem;
+    line-height: 1rem;
+}
+
+.accordion-wrap02 .c-checkout-step02-form .my-input ul .c-input-item {
+    position: relative;
+}
+
+.accordion-wrap02 .c-checkout-step02-form .my-input ul .c-input-item label, 
+.accordion-wrap02 .c-checkout-step02-form .my-input ul .c-select-item label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.accordion-wrap02 .c-checkout-step02-form .my-input input {
+    padding: 0.75rem 0.8125rem;
+    max-height: 2.75rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    height: auto;
+    border: 0.0625rem solid #cbc8c2;
+    color: #333;
 }
 
 @media (max-width: 48rem) {
     /* _font.scss */
-    .example .font-m-normal-14 {
+    .font-m-normal-14 {
         font-size: 0.875rem;
         line-height: 1rem;
         font-weight: 400;
     }
 
-    .example .font-m-normal-16 {
+    .font-m-normal-16 {
         font-size: 1rem;
         line-height: 1.125rem;
         font-weight: 400;
@@ -210,57 +364,96 @@
 }
 @media (min-width: 769px) {
     /* _font.scss */
-    .example .font-w-normal-20 {
+    .font-w-normal-20 {
         font-size: 1.25rem;
         line-height: 1.5rem;
         font-weight: 400;
     }
+    
+    .font-w-normal-24 {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        font-weight: 400;
+    }
 
-    .example .font-w-normal-14 {
+    .font-w-normal-14 {
         font-size: 0.875rem;
         line-height: 1.25rem;
     }
 
     /* _form.scss */
-    .example .c-input-item label {
+    .c-input-item label {
         display: block;
         color: #333;
         margin-bottom: 0.5rem;
     }
 
-    .example .c-input-item input, 
-    .example .c-input-item textarea {
+    .c-input-item input, 
+    .c-input-item textarea {
         height: 2.75rem;
     }
 
-    .example .c-warning {
+    .c-warning {
         margin-top: 0.5rem;
         font-size: 0.875rem;
         line-height: 1rem;
     }
 
+    /* accordion-wrap01 */
     /* CT000F */
-    .example .buy-new-address .c-checkout-step01-formbox .my-input .c-input-item label, 
-    .example .buy-new-address .c-checkout-step01-formbox .my-input .c-select-item label {
+    .accordion-wrap01 .example .buy-new-address .c-checkout-step01-formbox .my-input .c-input-item label, 
+    .accordion-wrap01 .example .buy-new-address .c-checkout-step01-formbox .my-input .c-select-item label {
         font-size: 1rem;
         line-height: 1.125rem;
     }
 
     /* CT000F > summary (acc head) */
-    .example .searchAddress__title:after{
+    .accordion-wrap01 .example .searchAddress__title:after{
         top: calc(50% - 0.375rem);
         width: 0.75rem;
         height: 0.5rem;
     }
     
     /* CT000F > acc body > input */
-    .example .my-input input {
+    .accordion-wrap01 .example .my-input input {
         font-size: 0.875rem;
     }
 
-    .example .my-input .c-warning {
+    .accordion-wrap01 .example .my-input .c-warning {
         font-size: 0.875rem;
         line-height: 1rem;
         margin-top: 0.5rem;
+    }
+
+    /* accordion-wrap02 */
+    .accordion-wrap02 .c-checkout-step02 {
+        margin-top: 1rem;
+        padding: 1.5rem;
+    }
+
+    .accordion-wrap02 .c-checkout-step02-form .my-input ul li + li {
+        margin-top: 1rem;
+    }
+
+    .accordion-wrap02 .c-checkout-step02-form__title {
+        padding: 1.5rem 1.5rem 0.625rem;
+        padding-bottom: 0;
+    }
+
+    .accordion-wrap02 .c-checkout-step02__box {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .accordion-wrap02 .c-checkout-step02__box .c-input-item--radio-select-box .c-radio-item .label {
+        font-size: 1rem;
+    }
+    
+    .accordion-wrap02 .c-checkout-step02-form .my-input {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .accordion-wrap02 .c-checkout-step02-form .my-input ul .c-input-item label {
+        font-size: 1rem;
+        line-height: 1.125rem;
     }
 }

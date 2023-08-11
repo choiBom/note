@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tag : input radio button</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="../../common/css/common.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="wrap accordion-wrap02">
+        <div class="example">
+            <div class="example_head">
+                <h3 class="example_title">tag : input radio</h3>
+            </div> 
+            <div class="example_container">
+                <div class="example_box">
+                    <!-- example contents start -->
+                    <div class="c-checkout-step02 c-checkout-step02-form">
+                        <p class="c-checkout-step02-form__title font-w-normal-24 font-m-normal-20">Purchase as</p>
+                        <div class="c-checkout-step02__box">
+                            <!-- [Start] 2023-07-28 : UPDATE- added radio type, remove checkbox type-->
+                            <div class="c-input-item c-input-item--radio-select-box">
+                                <div class="c-radio-item">
+                                    <input type="radio" name="PurchaseAs" value="Individual" id="checkId_Individual">
+                                    <label class="radio" for="checkId_Individual"><span class="label">Individual</span></label>
+                                </div>
+                                <div class="c-radio-item">
+                                    <input type="radio" name="PurchaseAs" value="Company" id="checkId_Company">
+                                    <label class="radio" for="checkId_Company">
+                                        <span class="label">Company</span>
+                                    </label>
+                                    <div class="c-input-item--radio-select-box__content">
+                                        <div class="my-input">
+                                            <ul>
+                                                <li>
+                                                    <div class="c-input-item">
+                                                        <label class="font-w-normal-20 font-m-normal-16" for="CompanyName">Company Name
+                                                        <!-- [Start] 2023-06-12 : ADD - number-text-->
+                                                        <!-- [End] 2023-06-12 : ADD - number-text-->
+                                                        </label>
+                                                        <input class="my-input__password  undefined" type="text" id="CompanyName" placeholder="" data-placeholder="" value="">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="c-input-item">
+                                                        <label class="font-w-normal-20 font-m-normal-16" for="OrganizationBIN">БИН организации
+                                                        <!-- [Start] 2023-06-12 : ADD - number-text-->
+                                                        <!-- [End] 2023-06-12 : ADD - number-text-->
+                                                        </label>
+                                                        <input class="my-input__password my-warn undefined" type="text" id="OrganizationBIN" placeholder="" data-placeholder="" value="">
+                                                    </div>
+                                                    <div class="c-warning font-m-normal-14 font-w-normal-14">Укажите БИН организации.</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [End] 2023-07-28 : UPDATE- added radio type, remove checkbox type-->
+                        </div>
+                    </div>
+                    </div>
+                    <!-- example contents end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
