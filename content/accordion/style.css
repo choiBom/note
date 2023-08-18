@@ -117,7 +117,7 @@
 .c-icon-button[class*=-more-info]:before {
     width: 100%;
     height: 100%;
-    background-image: url(../../assets/icon/icon-exclamation-mid-gray2-16-16.svg);
+    background-image: url(../../common/images/icon-arrow-gray3-down-10-6.svg);
 }
 
 a.c-icon-button, 
@@ -149,6 +149,10 @@ button.c-icon-button {
 }
 
 .c-accordion__button[aria-expanded=true] .expand {
+    display: none;
+}
+
+.c-accordion__body {
     display: none;
 }
 
@@ -462,7 +466,7 @@ button.c-icon-button {
     line-height: 1.25rem;
 }
 
-.CT000C .CT0302 .buy-delivery-box__item .c-accordion__head-text span.c-accordion__initial {
+.accordion-wrap03 .buy-delivery-box__item .c-accordion__head-text span.c-accordion__initial {
     position: relative;
     padding-right: 1.25rem;
 }
@@ -482,6 +486,10 @@ button.c-icon-button {
     align-items: center;
     padding-top: 0;
     padding-right: 1rem;
+}
+
+.accordion-wrap03 .buy-delivery-box__item .c-accordion__head-text .c-icon-button:before {
+    display: none;
 }
 
 .accordion-wrap03 .buy-delivery-box__item .c-accordion__button:after {

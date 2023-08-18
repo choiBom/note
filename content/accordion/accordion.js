@@ -13,6 +13,7 @@
 
 // util.js
 function beforeLaunch(DOM) {
+    // console.log("beforeLaunch")
     // case : DOM catch by querySelector.
     if (null == DOM) return true;
     // case : HTMLCollection or NodeList or what mutate them.
@@ -39,6 +40,7 @@ const selector = {
 };
 
 const singleFolding = function (element, trigger) {
+    console.log("singleFolding")
     // console.log('pair :', element, trigger);
     const status = element.classList.toggle(selector.active);
     trigger.setAttribute('aria-expanded', status);
@@ -46,6 +48,7 @@ const singleFolding = function (element, trigger) {
 };
 
 const syncFolding = function (element, trigger, targetRange) {
+    console.log("syncFolding")
     const status = element.classList.contains(selector.active);
     // all accordion target status reset to negative
     targetRange.forEach(t => {
@@ -60,6 +63,7 @@ const syncFolding = function (element, trigger, targetRange) {
 };
 
 const allOf = function (element, trigger, siblings) {
+    console.log("allOf")
     const status = element.classList.contains(selector.active);
     if (status) {
         siblings.forEach(s => {
@@ -77,6 +81,7 @@ const allOf = function (element, trigger, siblings) {
 };
 
 const useCollectAccordion = function (el, siblings) {
+    // console.log("useCollectAccordion")
     const contents = el.querySelector(selector.contents);
     const box = contents.closest(selector.box);
     const trigger = el.querySelector(`[aria-controls="${contents.getAttribute('id')}"]`);
@@ -103,8 +108,7 @@ const useCollectAccordion = function (el, siblings) {
 };
 
 const accordion = function (root) {
-    // console.log('root :', root);
-    console.log()
+    // console.log("accordion")
     const [...element] = root.querySelectorAll(selector.target);
     if (beforeLaunch(element)) return false;
     const allAccordionHandleTarget = element.map(el => [...el.querySelectorAll(selector.handleTarget)]).flat(1); // returns an un-nested array.
@@ -124,6 +128,8 @@ const accordion = function (root) {
 function init() {
     const component = document.querySelectorAll('.accordion-wrap03');
     if (beforeLaunch(component)) return false;
-
-    component.forEach(el => accordion.run(el));
+    // console.log("init")
+    component.forEach(el => accordion(el));
 }
+
+init()
