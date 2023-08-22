@@ -437,6 +437,10 @@ button.c-icon-button {
 }
 
 /* accordion-wrap03 */
+.accordion-wrap03 .c-accordion + .c-accordion {
+    margin-top: 10px;
+}
+
 .accordion-wrap03 .buy-delivery-box__item .c-accordion__box {
     margin-bottom: 0;
 }
