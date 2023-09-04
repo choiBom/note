@@ -23,7 +23,7 @@
                         <ul class="buy-delivery-box__list">
                             <li class="buy-delivery-box__item">
                                 <div class="c-accordion js-accordion buy-delivery-box__accordion ">
-                                    <div class="c-accordion__box js-accordion-handle-target c-accordion__box--expand">
+                                    <div class="c-accordion__box js-accordion-handle-target">
                                         <div class="c-accordion__head">
                                             <!-- block - text contents-->
                                             <div class="c-accordion__head__container">
@@ -96,16 +96,23 @@
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <!-- <script src="accordion.js"></script> -->
 <script>
-const accordionBox = document.querySelectorAll('.c-accordion')
-accordionBox.forEach(el => {
-    const accordionHead = el.querySelector('.c-accordion__head .c-accordion__button')
-    const hasExpand = el.querySelector('.c-accordion__box').classList.contains('c-accordion__box--expand')
+const accordion = document.querySelectorAll('.c-accordion')
+accordion.forEach((el, index) => {
+    console.log(el)
+    const accordionHead = el.querySelector('.c-accordion__head .c-accordion__button');
+    const accordionBox = el.querySelector('.c-accordion__box');
 
-    console.log(hasExpand)
-    accordionHead.addEventListener('click', () => {
+    accordionHead.addEventListener('click', (e) => {
+        if(accordionBox.classList.contains('c-accordion__box--expand')) {
+            console.log('has')
+            accordionHead.setAttribute('aria-expanded', false);
+            accordionBox.classList.remove('c-accordion__box--expand');
+        }else {
+            console.log('un')
+            e.target.closest('.c-accordion').querySelector('.c-accordion__head .c-accordion__button').setAttribute('aria-expanded', true);
+            e.target.closest('.c-accordion').querySelector('.c-accordion__box').classList.add('c-accordion__box--expand');
+        }
     });
-    console.log(accordionHead)
-
 });
 </script>
 </html>
